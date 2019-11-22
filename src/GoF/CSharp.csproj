@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9CFA32DE-9F61-4A6F-BD1F-FC21C0C77087}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TW.Teddysoft</RootNamespace>
+    <AssemblyName>CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\AbstractFactory\ans\AbstractFactory.cs" />
+    <Compile Include="src\AbstractFactory\ans\Drive.cs" />
+    <Compile Include="src\AbstractFactory\ans\IOPort.cs" />
+    <Compile Include="src\AbstractFactory\ans\LinuxFactory.cs" />
+    <Compile Include="src\AbstractFactory\ans\LinuxIOPort.cs" />
+    <Compile Include="src\AbstractFactory\ans\LinuxMonitor.cs" />
+    <Compile Include="src\AbstractFactory\ans\LinuxProcess.cs" />
+    <Compile Include="src\AbstractFactory\ans\LinuxSATADrive.cs" />
+    <Compile Include="src\AbstractFactory\ans\LinuxUSBDrive.cs" />
+    <Compile Include="src\AbstractFactory\ans\Monitor.cs" />
+    <Compile Include="src\AbstractFactory\ans\SimpleDriveFactory.cs" />
+    <Compile Include="src\AbstractFactory\ans\Process.cs" />
+    <Compile Include="src\AbstractFactory\ans\SystemManager.cs" />
+    <Compile Include="src\AbstractFactory\ans\SystemManagerTest.cs" />
+    <Compile Include="src\AbstractFactory\ans\WindowsFactory.cs" />
+    <Compile Include="src\AbstractFactory\ans\WinMonitor.cs" />
+    <Compile Include="src\AbstractFactory\ans\WinIOPort.cs" />
+    <Compile Include="src\AbstractFactory\ans\WinProcess.cs" />
+    <Compile Include="src\AbstractFactory\ans\WinSATADrive.cs" />
+    <Compile Include="src\AbstractFactory\ans\WinUSBDrive.cs" />
+    <Compile Include="src\AbstractFactory\exercise\Drive.cs" />
+    <Compile Include="src\AbstractFactory\exercise\IFactory.cs" />
+    <Compile Include="src\AbstractFactory\exercise\IOPort.cs" />
+    <Compile Include="src\AbstractFactory\exercise\LinuxFactory.cs" />
+    <Compile Include="src\AbstractFactory\exercise\LinuxIOPort.cs" />
+    <Compile Include="src\AbstractFactory\exercise\LinuxMonitor.cs" />
+    <Compile Include="src\AbstractFactory\exercise\LinuxProcess.cs" />
+    <Compile Include="src\AbstractFactory\exercise\LinuxSATADrive.cs" />
+    <Compile Include="src\AbstractFactory\exercise\LinuxUSBDrive.cs" />
+    <Compile Include="src\AbstractFactory\exercise\Monitor.cs" />
+    <Compile Include="src\AbstractFactory\exercise\Process.cs" />
+    <Compile Include="src\AbstractFactory\exercise\SimpleDriveFactory.cs" />
+    <Compile Include="src\AbstractFactory\exercise\SystemManager.cs" />
+    <Compile Include="src\AbstractFactory\exercise\SystemManagerTest.cs" />
+    <Compile Include="src\AbstractFactory\exercise\WindowsFactory.cs" />
+    <Compile Include="src\AbstractFactory\exercise\WinIOPort.cs" />
+    <Compile Include="src\AbstractFactory\exercise\WinMonitor.cs" />
+    <Compile Include="src\AbstractFactory\exercise\WinProcess.cs" />
+    <Compile Include="src\AbstractFactory\exercise\WinSATADrive.cs" />
+    <Compile Include="src\AbstractFactory\exercise\WinUSBDrive.cs" />
+    <Compile Include="src\Adapter\exercise\AgentModelAdapter.cs" />
+    <Compile Include="src\Command\ans\Command.cs" />
+    <Compile Include="src\Command\ans\Client.cs" />
+    <Compile Include="src\Command\ans\Door.cs" />
+    <Compile Include="src\Command\ans\DoorCommand.cs" />
+    <Compile Include="src\Command\ans\DoorCommandTest.cs" />
+    <Compile Include="src\Command\ans\Status.cs" />
+    <Compile Include="src\Command\ans\Thermal.cs" />
+    <Compile Include="src\Command\ans\ThermalCommand.cs" />
+    <Compile Include="src\Command\ans\Window.cs" />
+    <Compile Include="src\Command\ans\WindowCommand.cs" />
+    <Compile Include="src\Command\ans\Result.cs" />
+    <Compile Include="src\Command\ans\Server.cs" />
+    <Compile Include="src\Command\exercise\Client.cs" />
+    <Compile Include="src\Command\exercise\Door.cs" />
+    <Compile Include="src\Command\exercise\DoorCommand.cs" />
+    <Compile Include="src\Command\exercise\DoorCommandTest.cs" />
+    <Compile Include="src\Command\exercise\ICommand.cs" />
+    <Compile Include="src\Command\exercise\Result.cs" />
+    <Compile Include="src\Command\exercise\Server.cs" />
+    <Compile Include="src\Command\exercise\Status.cs" />
+    <Compile Include="src\Command\exercise\Thermal.cs" />
+    <Compile Include="src\Command\exercise\ThermalCommand.cs" />
+    <Compile Include="src\Command\exercise\Window.cs" />
+    <Compile Include="src\Command\exercise\WindowCommand.cs" />
+    <Compile Include="src\Composite\ans2\Bullet.cs" />
+    <Compile Include="src\Composite\ans2\Clip.cs" />
+    <Compile Include="src\Composite\ans2\FiringTest.cs" />
+    <Compile Include="src\Composite\ans2\LineBullet.cs" />
+    <Compile Include="src\Composite\ans2\ShotgunBullet.cs" />
+    <Compile Include="src\Composite\ans2\TraceBullet.cs" />
+    <Compile Include="src\Composite\ans2\TraceBulletClip.cs" />
+    <Compile Include="src\Composite\ans2\Weapon.cs" />
+    <Compile Include="src\Composite\ans\Bullet.cs" />
+    <Compile Include="src\Composite\ans\Clip.cs" />
+    <Compile Include="src\Composite\ans\FiringTest.cs" />
+    <Compile Include="src\Composite\ans\Weapon.cs" />
+    <Compile Include="src\Composite\ans\LineBullet.cs" />
+    <Compile Include="src\Composite\ans\ShotgunBullet.cs" />
+    <Compile Include="src\Composite\ans\TraceBullet.cs" />
+    <Compile Include="src\Composite\ans\TraceBulletClip.cs" />
+    <Compile Include="src\Composite\exercise\Bullet.cs" />
+    <Compile Include="src\Composite\exercise\Clip.cs" />
+    <Compile Include="src\Composite\exercise\BeforeApplyingCompositeTest.cs" />
+    <Compile Include="src\Composite\exercise\FiringTest.cs" />
+    <Compile Include="src\Composite\exercise\LineBullet.cs" />
+    <Compile Include="src\Composite\exercise\ShotgunBullet.cs" />
+    <Compile Include="src\Composite\exercise\TraceBullet.cs" />
+    <Compile Include="src\Composite\exercise\Weapon.cs" />
+    <Compile Include="src\Facade\exercise\MultiFunctionPrinter.cs" />
+    <Compile Include="src\FactoryMethod\ans\Drive.cs" />
+    <Compile Include="src\FactoryMethod\ans\GenericDriveManager.cs" />
+    <Compile Include="src\FactoryMethod\ans\DriveManager.cs" />
+    <Compile Include="src\FactoryMethod\ans\LinuxDriveManager.cs" />
+    <Compile Include="src\FactoryMethod\ans\LinuxSATADrive.cs" />
+    <Compile Include="src\FactoryMethod\ans\LinuxUSBDrive.cs" />
+    <Compile Include="src\FactoryMethod\ans\LinuxDriveManagerTest.cs" />
+    <Compile Include="src\FactoryMethod\ans\WinDriveManagerTest.cs" />
+    <Compile Include="src\FactoryMethod\ans\WinDriveManager.cs" />
+    <Compile Include="src\FactoryMethod\ans\WinSATADrive.cs" />
+    <Compile Include="src\FactoryMethod\ans\WinUSBDrive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\Drive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\DriveManager.cs" />
+    <Compile Include="src\FactoryMethod\exercise\LinuxDriveManager.cs" />
+    <Compile Include="src\FactoryMethod\exercise\LinuxDriveManagerTest.cs" />
+    <Compile Include="src\FactoryMethod\exercise\LinuxSATADrive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\LinuxUSBDrive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\SATADrive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\SimpleDriveFactory.cs" />
+    <Compile Include="src\FactoryMethod\exercise\USBDrive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\WinDriveManager.cs" />
+    <Compile Include="src\FactoryMethod\exercise\WinDriveManagerTest.cs" />
+    <Compile Include="src\FactoryMethod\exercise\WinSATADrive.cs" />
+    <Compile Include="src\FactoryMethod\exercise\WinUSBDrive.cs" />
+    <Compile Include="src\Observer\ans\Client.cs" />
+    <Compile Include="src\Observer\ans\Command.cs" />
+    <Compile Include="src\Observer\ans\Door.cs" />
+    <Compile Include="src\Observer\ans\DoorCommand.cs" />
+    <Compile Include="src\Observer\ans\ObserverTest.cs" />
+    <Compile Include="src\Observer\ans\Observer.cs" />
+    <Compile Include="src\Observer\ans\WritingLogObserver.cs" />
+    <Compile Include="src\Observer\ans\SentingAlertObserver.cs" />
+    <Compile Include="src\Observer\ans\Result.cs" />
+    <Compile Include="src\Observer\ans\Server.cs" />
+    <Compile Include="src\Observer\ans\Status.cs" />
+    <Compile Include="src\Observer\ans\Subject.cs" />
+    <Compile Include="src\Observer\ans\Thermal.cs" />
+    <Compile Include="src\Observer\ans\ThermalCommand.cs" />
+    <Compile Include="src\Observer\ans\Window.cs" />
+    <Compile Include="src\Observer\ans\WindowCommand.cs" />
+    <Compile Include="src\Observer\exercise\Client.cs" />
+    <Compile Include="src\Observer\exercise\Command.cs" />
+    <Compile Include="src\Observer\exercise\Door.cs" />
+    <Compile Include="src\Observer\exercise\DoorCommand.cs" />
+    <Compile Include="src\Observer\exercise\IObserver.cs" />
+    <Compile Include="src\Observer\exercise\ISubject.cs" />
+    <Compile Include="src\Observer\exercise\ObserverTest.cs" />
+    <Compile Include="src\Observer\exercise\Result.cs" />
+    <Compile Include="src\Observer\exercise\SentingAlertObserver.cs" />
+    <Compile Include="src\Observer\exercise\Server.cs" />
+    <Compile Include="src\Observer\exercise\Status.cs" />
+    <Compile Include="src\Observer\exercise\Thermal.cs" />
+    <Compile Include="src\Observer\exercise\ThermalCommand.cs" />
+    <Compile Include="src\Observer\exercise\Window.cs" />
+    <Compile Include="src\Observer\exercise\WindowCommand.cs" />
+    <Compile Include="src\Observer\exercise\WritingLogObserver.cs" />
+    <Compile Include="src\SimpleFactory\ans\Drive.cs" />
+    <Compile Include="src\SimpleFactory\ans\DriveManager.cs" />
+    <Compile Include="src\SimpleFactory\ans\SATADrive.cs" />
+    <Compile Include="src\SimpleFactory\ans\SimpleDriveFactory.cs" />
+    <Compile Include="src\SimpleFactory\ans\SimpleDriveFactoryTest.cs" />
+    <Compile Include="src\SimpleFactory\ans\USBDrive.cs" />
+    <Compile Include="src\SimpleFactory\exercise\Drive.cs" />
+    <Compile Include="src\SimpleFactory\exercise\ConsoleDriveManager.cs" />
+    <Compile Include="src\SimpleFactory\exercise\DriveManager.cs" />
+    <Compile Include="src\SimpleFactory\exercise\SimpleDriveFactory.cs" />
+    <Compile Include="src\SimpleFactory\exercise\SATADrive.cs" />
+    <Compile Include="src\SimpleFactory\exercise\SimpleDriveFactoryTest.cs" />
+    <Compile Include="src\SimpleFactory\exercise\USBDrive.cs" />
+    <Compile Include="src\Singleton\ans\AppConfig.cs" />
+    <Compile Include="src\Singleton\ans\AppConfigTest.cs" />
+    <Compile Include="src\Singleton\ans\Lazy4\AppConfig.cs" />
+    <Compile Include="src\Singleton\ans\Lazy\AppConfig.cs" />
+    <Compile Include="src\Singleton\exercise\AppConfig.cs" />
+    <Compile Include="src\Singleton\exercise\AppConfigTest.cs" />
+    <Compile Include="src\State\ansv2\CheckResult.cs" />
+    <Compile Include="src\State\ansv2\Command.cs" />
+    <Compile Include="src\State\ansv2\DownHard.cs" />
+    <Compile Include="src\State\ansv2\DownSoft.cs" />
+    <Compile Include="src\State\ansv2\Host.cs" />
+    <Compile Include="src\State\ansv2\HostFunctionTest.cs" />
+    <Compile Include="src\State\ansv2\HostStateTransitionTest.cs" />
+    <Compile Include="src\State\ansv2\State.cs" />
+    <Compile Include="src\State\ansv2\UpHard.cs" />
+    <Compile Include="src\State\ansv2\UpSoft.cs" />
+    <Compile Include="src\State\ans\CheckResult.cs" />
+    <Compile Include="src\State\ans\Command.cs" />
+    <Compile Include="src\State\ans\DownHard.cs" />
+    <Compile Include="src\State\ans\HostFunctionTest.cs" />
+    <Compile Include="src\State\ans\UpSoft.cs" />
+    <Compile Include="src\State\ans\UpHard.cs" />
+    <Compile Include="src\State\ans\DownSoft.cs" />
+    <Compile Include="src\State\ans\State.cs" />
+    <Compile Include="src\State\ans\Host.cs" />
+    <Compile Include="src\State\ans\HostStateTransitionTest.cs" />
+    <Compile Include="src\State\exercise\DownSoft.cs" />
+    <Compile Include="src\State\exercise\HostFunctionTest.cs" />
+    <Compile Include="src\State\exercise\HostState.cs" />
+    <Compile Include="src\State\exercise\CheckResult.cs" />
+    <Compile Include="src\State\exercise\Command.cs" />
+    <Compile Include="src\State\exercise\Host.cs" />
+    <Compile Include="src\State\exercise\HostStateTransitionTest.cs" />
+    <Compile Include="src\State\exercise\IState.cs" />
+    <Compile Include="src\State\exercise\DownHard.cs" />
+    <Compile Include="src\State\exercise\UPSoft.cs" />
+    <Compile Include="src\State\exercise\UPHard.cs" />
+    <Compile Include="src\Strategy\ans\Fat32.cs" />
+    <Compile Include="src\Strategy\ans\Formater.cs" />
+    <Compile Include="src\Strategy\ans\Fat.cs" />
+    <Compile Include="src\Strategy\ans\Ntfs.cs" />
+    <Compile Include="src\Strategy\ans\DriveManager.cs" />
+    <Compile Include="src\Strategy\ans\DriveManagerTest.cs" />
+    <Compile Include="src\Strategy\exercise\DriveManager.cs" />
+    <Compile Include="src\Strategy\exercise\DriveManagerTest.cs" />
+    <Compile Include="src\Strategy\exercise\FAT32.cs" />
+    <Compile Include="src\Strategy\exercise\FileSystemEnum.cs" />
+    <Compile Include="src\Strategy\exercise\IFormater.cs" />
+    <Compile Include="src\Strategy\exercise\FAT.cs" />
+    <Compile Include="src\Strategy\exercise\NTFS.cs" />
+    <Compile Include="src\TemplateMethod\ans\ConfigParser.cs" />
+    <Compile Include="src\TemplateMethod\ans\ConfigParserTest.cs" />
+    <Compile Include="src\TemplateMethod\ans\DbConfigParser.cs" />
+    <Compile Include="src\TemplateMethod\ans\FileConfigParser.cs" />
+    <Compile Include="src\TemplateMethod\ans\PersonData.cs" />
+    <Compile Include="src\TemplateMethod\exercise\ConfigParser.cs" />
+    <Compile Include="src\TemplateMethod\exercise\ConfigParserTest.cs" />
+    <Compile Include="src\TemplateMethod\exercise\DbConfigParser.cs" />
+    <Compile Include="src\TemplateMethod\exercise\FileConfigParser.cs" />
+    <Compile Include="src\TemplateMethod\exercise\PersonData.cs" />
+    <Compile Include="src\Facade\ans\Fax.cs" />
+    <Compile Include="src\Facade\ans\LCD.cs" />
+    <Compile Include="src\Facade\ans\Image.cs" />
+    <Compile Include="src\Facade\ans\Paper.cs" />
+    <Compile Include="src\Facade\ans\Printer.cs" />
+    <Compile Include="src\Facade\ans\PrinterException.cs" />
+    <Compile Include="src\Facade\ans\Scanner.cs" />
+    <Compile Include="src\Facade\ans\ScannerException.cs" />
+    <Compile Include="src\Facade\ans\WhenUsingMultiFunctionPrinterToCopy.cs" />
+    <Compile Include="src\Facade\ans\MultiFunctionPrinter.cs" />
+    <Compile Include="src\Facade\exercise\Fax.cs" />
+    <Compile Include="src\Facade\exercise\Image.cs" />
+    <Compile Include="src\Facade\exercise\LCD.cs" />
+    <Compile Include="src\Facade\exercise\Paper.cs" />
+    <Compile Include="src\Facade\exercise\Printer.cs" />
+    <Compile Include="src\Facade\exercise\PrinterException.cs" />
+    <Compile Include="src\Facade\exercise\Scanner.cs" />
+    <Compile Include="src\Facade\exercise\ScannerException.cs" />
+    <Compile Include="src\Facade\exercise\WhenUsingMultiFunctionPrinterToCopy.cs" />
+    <Compile Include="src\Facade\ans\WhenTestingClient.cs" />
+    <Compile Include="src\Facade\ans\ClientA.cs" />
+    <Compile Include="src\Facade\ans\ClientB.cs" />
+    <Compile Include="src\Facade\exercise\ClientA.cs" />
+    <Compile Include="src\Facade\exercise\ClientB.cs" />
+    <Compile Include="src\Facade\exercise\WhenTestingClient.cs" />
+    <Compile Include="src\Adapter\ans\Acceptor.cs" />
+    <Compile Include="src\Adapter\ans\ConfigObject.cs" />
+    <Compile Include="src\Adapter\ans\Agent.cs" />
+    <Compile Include="src\Adapter\ans\ConfigContext.cs" />
+    <Compile Include="src\Adapter\ans\AgentModelAdapter.cs" />
+    <Compile Include="src\Adapter\ans\Contact.cs" />
+    <Compile Include="src\Adapter\ans\Host.cs" />
+    <Compile Include="src\Adapter\ans\ServerModelAdapter.cs" />
+    <Compile Include="src\Adapter\ans\ServerModelAdapterTest.cs" />
+    <Compile Include="src\Adapter\ans\AgentModelAdapterTest.cs" />
+    <Compile Include="src\Adapter\exercise\Acceptor.cs" />
+    <Compile Include="src\Adapter\exercise\Agent.cs" />
+    <Compile Include="src\Adapter\exercise\AgentModelAdapterTest.cs" />
+    <Compile Include="src\Adapter\exercise\ConfigContext.cs" />
+    <Compile Include="src\Adapter\exercise\ConfigObject.cs" />
+    <Compile Include="src\Adapter\exercise\Contact.cs" />
+    <Compile Include="src\Adapter\exercise\Host.cs" />
+    <Compile Include="src\Adapter\exercise\ServerModelAdapter.cs" />
+    <Compile Include="src\Adapter\exercise\ServerModelAdapterTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 封裝。請啟用 NuGet 封裝還原，以下載該封裝。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit3TestAdapter.3.8.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+</Project>
